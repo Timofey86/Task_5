@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.forms.form.onsubmit = function (e) {
         e.preventDefault();
         let txt = document.forms.form.txt.value;
+        if (txt == '') {
+            alert('Enter the Task!')
+            die;
+        }
         let body = 'txt=' + encodeURIComponent(txt);
         let xhr = new XMLHttpRequest();
         xhr.open('POST', '/controllers/sendMessage.php');

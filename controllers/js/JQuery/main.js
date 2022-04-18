@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     function showData() {
         $.ajax({
-            url: '/controllers/get_all_records.php',
+            url: '/controllers/getAllRecords.php',
             type: 'POST',
             success: function (result) {
                 $("#data").html(result);
@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     function totalTask() {
         $.ajax({
-            url: '/controllers/total_task.php',
+            url: '/controllers/totalTask.php',
             type: 'POST',
             success: function (result) {
                 $("#total_task").html(result);
@@ -29,9 +29,13 @@ $(document).ready(function () {
     $("#btn").on("click", function (e) {
         e.preventDefault();
         txt = $("#txt").val();
+        if (txt == ''){
+            alert('Enter the Task!')
+            die;
+        }
 
         $.ajax({
-            url: '/controllers/send_message.php',
+            url: '/controllers/sendMessage.php',
             type: 'POST',
             data: {
                 txt: txt
@@ -50,12 +54,12 @@ $(document).ready(function () {
         });
     });
 
-    $(document).on("click", "#delete", function () {
+    /*$(document).on("click", "#delete", function () {
         id = $(this).data("id");
         element = $(this);
 
         $.ajax({
-            url: '/controllers/delete_task.php',
+            url: '/controllers/deleteTask.php',
             type: 'POST',
             data: {
                 id: id
@@ -68,12 +72,12 @@ $(document).ready(function () {
                 }
             }
         });
-    })
+    })*/
 
     document.deleteItem = function (id) {
         let element = $('#'+id);
         $.ajax({
-            url: '/controllers/delete_task.php',
+            url: '/controllers/deleteTask.php',
             type: 'POST',
             data: {
                 id: id
@@ -91,7 +95,7 @@ $(document).ready(function () {
 
     $(document).on("click", "#clear", function () {
         $.ajax({
-            url: '/controllers/clear_tasks.php',
+            url: '/controllers/clearTasks.php',
             type: 'POST',
             success: function (result) {
                 if (result == 1) {
