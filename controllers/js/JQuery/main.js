@@ -72,7 +72,6 @@ $(document).ready(function () {
 
     document.deleteItem = function (id) {
         let element = $('#'+id);
-        //console.log("element:", element);
         $.ajax({
             url: '/controllers/delete_task.php',
             type: 'POST',
