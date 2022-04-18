@@ -15,5 +15,4 @@ class AllRecords
     {
         return mysqli_query($this->db, "SELECT * FROM `list`");
     }
-
 }

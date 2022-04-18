@@ -14,7 +14,9 @@ if (mysqli_num_rows($result) > 0) {
             <tr>
                 <td width="200" align="center"><?php echo $row['txt'] . ' '; ?></td>
                 <td align="right">
-                    <button  onclick="deleteItem(<?php echo $row['id'] ?>)" id="<?php echo $row['id'] ?>"  class="btn btn-danger">Delete</button>
+                    <button onclick="deleteItem(<?php echo $row['id'] ?>)" id="<?php echo $row['id'] ?>"
+                            class="btn btn-danger">Delete
+                    </button>
                 </td>
             </tr>
         </table>

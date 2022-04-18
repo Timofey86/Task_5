@@ -16,7 +16,5 @@ class SendMessage
     public function sendToDataBase()
     {
         return mysqli_query($this->db, "INSERT INTO `list` (`id`, `txt`) VALUES (NULL, '$this->txt')");
-
     }
-
 }

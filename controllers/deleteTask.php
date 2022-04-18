@@ -5,7 +5,7 @@ require_once '../app/DeleteTask.php';
 use app\DeleteTask;
 
 $id = $_POST['id'];
-$delete_task = new DeleteTask($id,$db);
+$delete_task = new DeleteTask($id, $db);
 $result = $delete_task->deleteTask();
 
 if ($result) {

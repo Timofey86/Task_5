@@ -17,5 +17,4 @@ class DeleteTask
     {
         return mysqli_query($this->db, "DELETE FROM `list` WHERE `list`.`id` = '$this->id'");
     }
-
 }

@@ -15,5 +15,4 @@ class TotalTask
     {
         return mysqli_query($this->db, "SELECT * FROM `list`");
     }
-
 }
