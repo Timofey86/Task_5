@@ -2,7 +2,7 @@
 
 namespace app;
 
-class Total_Task
+class AllRecords
 {
     private $db;
 
@@ -11,7 +11,7 @@ class Total_Task
         $this->db = $db;
     }
 
-    public function getTotalTask()
+    public function getAllRecords()
     {
         return mysqli_query($this->db, "SELECT * FROM `list`");
     }

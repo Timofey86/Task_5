@@ -1,10 +1,10 @@
 <?php
 require_once '../config/connect.php';
-require_once '../app/Clear_Tasks.php';
+require_once '../app/ClearTasks.php';
 
-use app\Clear_Tasks;
+use app\ClearTasks;
 
-$clear_tasks = new Clear_Tasks($db);
+$clear_tasks = new ClearTasks($db);
 $result = $clear_tasks->clearTasks();
 
 if ($result) {

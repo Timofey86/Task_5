@@ -2,7 +2,7 @@
 
 namespace app;
 
-class Delete_Task
+class DeleteTask
 {
     private $id;
     private $db;

@@ -2,7 +2,7 @@
 
 namespace app;
 
-class All_records
+class ClearTasks
 {
     private $db;
 
@@ -11,9 +11,8 @@ class All_records
         $this->db = $db;
     }
 
-    public function getAllRecords()
+    public function clearTasks()
     {
-        return mysqli_query($this->db, "SELECT * FROM `list`");
+        return mysqli_query($this->db, "DELETE FROM `list`");
     }
-
 }

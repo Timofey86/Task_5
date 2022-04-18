@@ -1,11 +1,11 @@
 <?php
 require_once '../config/connect.php';
-require_once '../app/delete_task.php';
+require_once '../app/DeleteTask.php';
 
-use app\Delete_Task;
+use app\DeleteTask;
 
 $id = $_POST['id'];
-$delete_task = new Delete_Task($id,$db);
+$delete_task = new DeleteTask($id,$db);
 $result = $delete_task->deleteTask();
 
 if ($result) {

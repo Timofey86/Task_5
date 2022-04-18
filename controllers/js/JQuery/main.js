@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
 
     $(document).on("click", "#delete", function () {
-        id = $(this).data("id")
+        id = $(this).data("id");
         element = $(this);
 
         $.ajax({
@@ -69,6 +69,26 @@ $(document).ready(function () {
             }
         });
     })
+
+    document.deleteItem = function (id) {
+        let element = $('#'+id);
+        //console.log("element:", element);
+        $.ajax({
+            url: '/controllers/delete_task.php',
+            type: 'POST',
+            data: {
+                id: id
+            },
+            success: function (result) {
+                if (result == 1) {
+                    $(element).closest("td").fadeOut();
+                    showData();
+                    totalTask();
+                }
+            }
+        });
+
+    }
 
     $(document).on("click", "#clear", function () {
         $.ajax({

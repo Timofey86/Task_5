@@ -23,6 +23,6 @@ require_once '../views/templates/head.php';
 <?php
 require_once '../views/templates/footer.php';
 ?>
-<script src="../controllers/js/main.js"></script>
+<script src="../controllers/js/JQuery/main.js"></script>
 </body>
 </html>

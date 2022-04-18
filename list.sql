@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 14 2022 г., 11:31
+-- Время создания: Апр 18 2022 г., 07:21
 -- Версия сервера: 5.7.33-log
 -- Версия PHP: 7.3.33
 
@@ -37,10 +37,9 @@ CREATE TABLE `list` (
 --
 
 INSERT INTO `list` (`id`, `txt`) VALUES
-(21, 'work'),
-(22, 'eat'),
-(23, 'sleep'),
-(26, 'go home');
+(55, 'work'),
+(56, 'eat'),
+(57, 'end task 5');
 
 --
 -- Индексы сохранённых таблиц
@@ -60,7 +59,7 @@ ALTER TABLE `list`
 -- AUTO_INCREMENT для таблицы `list`
 --
 ALTER TABLE `list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

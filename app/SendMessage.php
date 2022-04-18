@@ -2,7 +2,7 @@
 
 namespace app;
 
-class Send_Message
+class SendMessage
 {
     private $txt;
     private $db;
